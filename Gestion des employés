@@ -1,0 +1,65 @@
+
+public class Employe {
+    private static int s=0 ;
+    protected int Id;
+    private String name;
+    private String Role;
+    private int Salary;
+
+    private int Date;
+    private int Hour;
+
+    public Employe(String name,String role ,int hour ,int Salary, int Date){
+        this.Name=name;
+        this.Role=role;
+        this.Id=++s;
+        this.Salary=salary;
+        this.Hour=hour;
+        this.Date=date;
+    }
+
+    public String get_name(){
+        return Name;
+    }
+    public void set_name(String n){
+        Name=n;
+    }
+    public int get_id(){
+        return Id;
+    }
+    public int get_salary(){
+        return Salary;
+    }
+    public void set_salary(int s){
+        Salary=s;
+    }
+    public void set_date(int d){
+        Date=d;
+    }
+    public int get_date(){
+        return Date;
+    }
+    public String get_role(){
+        return Role;
+    }
+    public void  set_role(String r){
+        Role=r;
+    }
+
+    public int get_hour(){
+        return Hour;
+    }
+    public void  set_hour(int h){
+        Hour=h;
+    }
+
+    public void salaire_mensuel(int objectif){
+        float total;
+        System.out.println("le salaire de base est: "+get_salary());
+        System.out.println("le nombre d'heures supplementaires: "+get_hour());
+        System.out.println("le nombre d'objectif atteints: "+objectif);
+        total=get_salaire()+get_heure()*150+objectif*500;
+        System.out.println("le salaire total mensuel: "+total);
+    }
+
+}
